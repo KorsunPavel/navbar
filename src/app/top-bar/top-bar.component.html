@@ -1,0 +1,21 @@
+<div class="page-wrapped">
+    <header class="bar-top">
+        <img src="assets/Logo_Epam_White.svg" class="bar-logo" alt="">
+        <span class="separator">|</span>
+        <span class="project-logo">PIP-BOX</span>
+        <span (click)="onClick()">
+            <i [ngClass]="{'glyphicon': !isExpand, 'glyphicon-menu-up': !isExpand}"></i>
+            <i class="glyphicon" [class.glyphicon-menu-down]="isExpand"></i>
+        </span>
+        <span class="bar-name">Pavel</span>
+        <img class="bar-photo" src="" />
+        <span class="bar-settings" onclick=""></span>
+    </header>
+    <div class="admin-tool" *ngIf="isExpand==true">
+        <span class="admin-item">USERS</span>
+        <span class="admin-item">LOCATION/DEPARTMENTS</span>
+        <span class="admin-item">CANDIDATE LIST</span>
+        <span class="admin-item">FEEDBACK TEMPLATES</span>
+    </div>
+    <!-- <div style="height:150px; background-color: red"></div> -->
+</div>
