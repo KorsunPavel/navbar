@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
    <top-bar></top-bar>
+   <router-outlet></router-outlet>
   `,
   styles: []
 })

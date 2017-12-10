@@ -1,4 +1,6 @@
-import { OnInit, Component, Input } from "@angular/core";
+import { OnInit, Component, Input} from "@angular/core";
+import { EventEmitter } from "@angular/core/src/event_emitter";
+import { Element } from "@angular/compiler";
 
 //import { UserProfileService } from "../user/user-profile.service";
 //import { UserProfile } from "../user/UserProfile";
@@ -9,7 +11,8 @@ import { OnInit, Component, Input } from "@angular/core";
     styleUrls: ['./top-bar.component.scss'],
 })
 
-export class TopBarComponent implements OnInit {
+export class TopBarComponent implements  OnInit{
+   
     //profile: UserProfile;
     // constructor(private service: UserProfileService) {
     //     this.profile = {
@@ -25,5 +28,10 @@ export class TopBarComponent implements OnInit {
     }
     onClick() {
         this.isExpand = !this.isExpand;
+    }
+
+    clickLink(event: any){
+         console.log(event);
+        // event.target.nextElementSibling.classList.add("active-link");
     }
 }
